@@ -1,0 +1,228 @@
+/***** Global Styles****/
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  background: #2c3e50;
+
+  background: linear-gradient(#bdc3c7 0%, #2c3e50 100%);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+/********************* Main Layout*******************/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+  position: relative;
+}
+
+.container > * {
+  grid-column: 1 / span 12;
+}
+/****************** Header *****************/
+
+.container > header {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #404040;
+  align-items: center;
+  height: 150px;
+}
+
+.conrainer > header h1 {
+  width: 50%;
+  margin-left: 20px;
+  font-size: 3em;
+}
+
+.log {
+  width: 50%;
+  justify-content: end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.log button {
+  margin-right: 20px;
+  border-radius: 20px;
+}
+/****************** Main ************************/
+
+.mainContainer {
+  grid-column: 2 / span 10;
+  display: grid;
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 3em;
+
+  /* grid-template-columns: repeat(4, 1fr); */
+  /* border: 1px solid black; */
+}
+
+/**************  Card *******************************/
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px 0 #383838;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 250px;
+}
+
+.card header {
+  background-color: #404040;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  padding: 1em;
+}
+
+#del {
+  /* float: left; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 5px;
+}
+
+.card main {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info h3 {
+  margin: 0;
+}
+
+/****************** Form Overlay *************************************/
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  /* height: 500px; */
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+/* .size {
+  width: 50%;
+} */
+
+#form h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+#form .user-box {
+  position: relative;
+}
+
+#form .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+/* #form .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+} */
+
+.form .user-box input:focus ~ label,
+.form .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+/* form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100%;
+  background: white;
+  border-radius: 10px;
+} */
+
+/* label {
+  margin-top: 10px;
+} */
+
+/* #cancel {
+  position: absolute;
+  top: 0;
+  left: 117px;
+} */
+
+.btn-container {
+  display: flex;
+}

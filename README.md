@@ -15,7 +15,7 @@ Requirements:
 
 Phase I : Start with basic functionalities. Develop a page with minimum css and focus on html and JavaScript. Develop an MVP
 
-Phase II: Focus on design and CSS part 
+Phase II: Focus on design and CSS part and responsive design
 
 Phase III: Learn about sotring data, add a starting page and login functionality
 
